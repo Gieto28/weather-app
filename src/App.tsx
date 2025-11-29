@@ -67,6 +67,7 @@ const App: React.FC = () => {
               onClick={handleLocationRequest}
               disabled={geolocation.isLoading}
               className="btn btn-primary"
+              title={geolocation.permissionDenied ? 'Click to request location permission again' : undefined}
             >
               {geolocation.isLoading ? 'Loading...' : '📍 My Location'}
             </button>
